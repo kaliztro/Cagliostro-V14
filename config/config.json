@@ -1,0 +1,17 @@
+{
+    "token": "NzUxMTYzMzI5NjQwMzk4ODg5.GOGsab.6J9kC2PQX-waCODf3g1Lf3nbc5-lC7YNeKaqGA",
+    "mongooseConnectionString": "mongodb+srv://cleber:cleber@cagliostro-cluster.2ipal.mongodb.net/teste_do_bot?retryWrites=true&w=majority",
+
+    "PREFIX": "!",
+
+    "cor": "#3086c9",
+
+    "donoID": "701901561915506717",
+    
+    "CLIENT_ID": "751163329640398889",
+    "GUILD_ID": "1004918565603921920",
+
+    "messages": {
+		"COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
+	}
+}
