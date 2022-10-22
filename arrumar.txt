@@ -1,0 +1,19 @@
+---[AVISO!] Cagliostro V14 não terá comandos com prefixo, o prefixo será apenas para o criador mudar os status ou outra configuração
+
+
+arrumar o config.cor
+
+comando falar nao envia msg, so se comentar o if que verifica se a msg foi enviada em um chat valido
+
+userinfo atividade da erro (acho que é pq retorna ua array vazia)
+
+serverinfo linhas comentadas estao com erro e eu estava com sono para descobrir a causa
+
+
+
+
+Testes:
+
+testar o comando banner em quem tem banner personalizado
+
+verificar os comandos de mod quando o user ou o bot nao tiverem permissao

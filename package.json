@@ -1,22 +1,8 @@
 {
   "name": "cagliostro-v14",
-  "version": "3.1.0",
-  "description": "Bot Cagliostro para gerneciar o servidor no discord",
+  "version": "3.14.0",
+  "description": "Bot Cagliostro para gerenciar o servidor no discord",
   "main": "index.js",
-  "scripts": {
-    "start": "node .",
-    "test": "nodemon index.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kaliztro/Cagliostro-V14.git"
-  },
-  "author": "Kaliztro#4988",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kaliztro/Cagliostro-V14/issues"
-  },
-  "homepage": "https://github.com/kaliztro/Cagliostro-V14#readme",
   "dependencies": {
     "@discordjs/rest": "^1.0.1",
     "ascii-table": "^0.0.9",
@@ -31,5 +17,19 @@
   },
   "devDependencies": {
     "nodemon": "^2.0.19"
-  }
+  },
+  "scripts": {
+    "start": "node .",
+    "test": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaliztro/Cagliostro-bot.git"
+  },
+  "author": "Kaliztro#4988",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaliztro/Cagliostro-bot/issues"
+  },
+  "homepage": "https://github.com/kaliztro/Cagliostro-bot#readme"
 }

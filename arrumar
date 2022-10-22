@@ -1,5 +1,0 @@
-arrumar o config.cor
-
-testar o comando banner em quem tem banner personalizado
-
-comando falar nao envia msg, so se comentar o if que verifica se a msg foi enviada em um chat valido
