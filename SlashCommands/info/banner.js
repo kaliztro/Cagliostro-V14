@@ -38,7 +38,7 @@ module.exports = {
                 const extension = banner.startsWith("a_") ? ".gif" : ".png";
                 const url = `http://cdn.discordapp.com/banners/${user.id}/${banner}${extension}?size=2048`; // quando o usuario tem baner personalizado 
         
-                const embed = new MessageEmbed()
+                const embed = new EmbedBuilder()
                 .setTitle(`${user.tag}`)
                 .setImage(url)
                 .setColor(accent_color || config.cor);
