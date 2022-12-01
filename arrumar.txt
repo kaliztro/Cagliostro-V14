@@ -1,19 +1,53 @@
 ---[AVISO!] Cagliostro V14 não terá comandos com prefixo, o prefixo será apenas para o criador mudar os status ou outra configuração
 
+arrumar o config.cor e corrigir em cada comando
 
-arrumar o config.cor
+verificar as permições para o bot e user de todos os comandos
 
-comando falar nao envia msg, so se comentar o if que verifica se a msg foi enviada em um chat valido
+userinfo atividade da erro quando verifica um bot (retorna ua array vazia)  
 
-userinfo atividade da erro (acho que é pq retorna ua array vazia)
+dar uma olhada no comando config
 
-serverinfo linhas comentadas estao com erro e eu estava com sono para descobrir a causa
+adicionar a opcao de remover todos os cargos do comando rcargo
+
+comando lock colocar opcoes para trancar e destrancar em um unico comando 
+
+criar uma tela inicial de configuração de cargos, msg de boas vindas etc... tipo o bot d ejogos gratis
 
 
+depois de pronto:
+
+iplementar os comandos de musica 
+sistema de level ??
 
 
 Testes:
 
-testar o comando banner em quem tem banner personalizado
-
 verificar os comandos de mod quando o user ou o bot nao tiverem permissao
+
+comando ban e kick e verificar se ambos estao mantendo no historico o motivo
+
+ativar a autenticacao de dois faotores e verificar no serverinfo se esta correto 
+
+testar o botao jogos gratis
+
+comandos funcionando:
+
+lock
+unlock
+rcargo
+falar
+serverinfo
+
+
+interaction types
+https://discord.com/developers/docs/interactions/application-commands
+
+permissions 
+https://www.folkstalk.com/tech/discord-js-permission-bitfield-with-code-examples/
+
+channel type
+https://discord.com/developers/docs/resources/channel
+
+atividades
+https://discord.com/developers/docs/game-sdk/activities

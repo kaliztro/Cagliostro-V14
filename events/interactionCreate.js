@@ -1,7 +1,8 @@
 const { EmbedBuilder, Collection, PermissionsBitField } = require('discord.js');
 const ms = require('ms');
 const client = require('..');
-const config = require('../config/config.json');
+// const config = require('../config/config.json');
+const config = require(`..`);
 
 const cooldown = new Collection();
 
@@ -56,9 +57,37 @@ client.on('interactionCreate', async interaction => {
 					}
 
 				}
-				await slashCommand.run(client, interaction, config );
+				await slashCommand.run(client, interaction, config);
 			}
 		} catch (error) {
 				console.log(error);
 		}
+
+
+		    //button
+			if (interaction.isButton()) {
+
+				const guildDB = await Schema.findOne({ _id: interaction.member.guild.id });
+		
+				let cargo = interaction.member.guild.roles.cache.get(guildDB?.Botao?.cargo) 
+		
+				if (!cargo) return
+		
+				let membro = interaction.member
+		
+				if (interaction.customId === `cargofreegame`){
+					
+					membro.roles.add(cargo)
+					interaction.reply({ content: `Feitoria`, ephemeral: true})
+				}
+		
+				if (interaction.customId === `removercargofreegame`){
+					
+					membro.roles.remove(cargo)
+					interaction.reply({ content: `removido`, ephemeral: true})
+				}
+		
+			}
+			
+
 });

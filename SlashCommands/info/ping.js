@@ -1,4 +1,4 @@
-const { Client, CommandInteraction, ApplicationCommandType } = require("discord.js");
+const { Client, CommandInteraction, ApplicationCommandType, messageLink } = require("discord.js");
 
 module.exports = {
     name: "ping",
@@ -14,7 +14,6 @@ module.exports = {
 
         await interaction.reply(`**Ping?**`);
         await interaction.editReply(`:ping_pong: **| Pong!**\n Latencia da API: **${Math.round(client.ws.ping)}ms**`)
-    
 
     },
 };

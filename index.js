@@ -43,6 +43,8 @@ mongoose.connect(mongooseConnectionString).then(() => console.log(chalk.red('Dat
 //prefix
 client.on("messageCreate", async (message) => {
 
+  // console.log(message)
+
   const config = require("./config/config.json");
   const PREFIX = config.PREFIX
 

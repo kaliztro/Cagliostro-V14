@@ -14,18 +14,24 @@ module.exports = {
 
   run: async (client, interaction, args, config) => {
     const verificationLevels = {
-      NONE: 'Nenhuma',
-      LOW: 'Baixa',
-      MEDIUM: 'Média',
-      HIGH: 'Alta',
-      VERY_HIGH: 'Muito alta'
+      0: 'Nenhum',
+      1: 'Baixa',
+      2: 'Média',
+      3: 'Alta',
+      4: 'Muito alta'
+    };
+
+    const explicit = {
+      0: 'Desabilitado',
+      1: 'Média',
+      2: 'Alta',
     };
 
     const premiumTier = {
-      NONE: `Esse servidor não possui boost. 😥`,
-      TIER_1: `Nível 1`,
-      TIER_2: `Nível 2`,
-      TIER_3: `Nível 3`,
+      0: `Esse servidor não possui boost. 😥`,
+      1: `Nível 1`,
+      2: `Nível 2`,
+      3: `Nível 3`,
     }
 
     const regiao = {
@@ -45,21 +51,24 @@ module.exports = {
         {name: '**Nome:**', value: interaction.guild.name, inline: true},
         {name: '**ID:**', value: interaction.guild.id, inline: true},
         {name: '**Descrição:**', value: interaction.guild.description || `Servidor não possui descrição`},
-        // {name: '**Dono(a):**', value: owner},
+        {name: '**Dono(a):**', value:`<@${owner.id}>`},
         {name: '**Região:**', value: regiao[interaction.guild.preferredLocale]},
-        // {name: '**Canais**', value: interaction.guild.channels.cache.size, inline: true},
-        // {name: '**Cargos**', value: interaction.guild.roles.cache.size, inline: true},
-        // {name: '**Humanos |**', value: interaction.guild.members.cache.filter(member => !member.user.bot).size, inline: true},
-        // {name: '** Bots**', value: interaction.guild.members.cache.filter(member => member.user.bot).size, inline: true},
+        {name: '**Canais**', value: `${interaction.guild.channels.cache.size}`, inline: true},
+        {name: '**Cargos**', value: `${interaction.guild.roles.cache.size}`, inline: true},
+        {name: '**Humanos |**', value: `${interaction.guild.members.cache.filter(member => !member.user.bot).size}`, inline: true},
+        {name: '** Bots**', value: `${interaction.guild.members.cache.filter(member => member.user.bot).size}`, inline: true},
         {name: '**Canal de Regras:**', value: `<#${interaction.guild.rulesChannelId}>`},
-        // {name: 'Nível de boost:', value: premiumTier[interaction.guild.premiumTier]},
-        // {name: '**Nível de verificação:**', value: verificationLevels[interaction.guild.verificationLevel]},
+        {name: 'Nível de boost:', value: `${premiumTier[interaction.guild.premiumTier]}`},
+        {name: '**Nível de verificação:**', value: `${verificationLevels[interaction.guild.verificationLevel]}`},
+        {name: '**Filtro de conteudo explicito:**', value: `${explicit[interaction.guild.explicitContentFilter]}`},
+        {name: '**2FA:**', value: `${verificationLevels[interaction.guild.mfaLevel]}`},
         {name: '**Criado em:**', value: formatDate('DD/MM/YYYY', date)},
       )
 
       .setTimestamp()
 
     interaction.reply({ embeds: [embed] })
+    .catch((err) => console.log(`erro ${err}`))
   },
 };
 

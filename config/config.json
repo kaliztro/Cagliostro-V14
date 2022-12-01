@@ -11,6 +11,8 @@
     "CLIENT_ID": "751163329640398889",
     "GUILD_ID": "1004918565603921920",
 
+    "senha_database_Supabase": "vDrgYOFPfUCrCWuy",
+
     "messages": {
 		"COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
 	}

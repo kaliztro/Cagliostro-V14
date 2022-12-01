@@ -1,11 +1,12 @@
 const { ApplicationCommandType, ActionRowBuilder, ButtonBuilder, EmbedBuilder } = require('discord.js');
+const config = require('../../config/config.json');
 
 module.exports = {
 	name: 'color',
 	description: "Choose a color!",
 	type: ApplicationCommandType.ChatInput,
 	cooldown: 3000,
-	run: async (client, interaction, config) => {
+	run: async (client, interaction) => {
         /** Get the buttons
          * @param {Boolean} toggle - Toggle disable buttons
          * @param {string} [choice = null] choice - The color user chose

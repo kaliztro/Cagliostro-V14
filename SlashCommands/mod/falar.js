@@ -1,4 +1,4 @@
-const { Client, CommandInteraction, ApplicationCommandType, Permissions } = require("discord.js");
+const { Client, CommandInteraction, ApplicationCommandType, EmbedBuilder } = require("discord.js");
 
 module.exports = {
     name: "falar",
@@ -18,6 +18,12 @@ module.exports = {
             description: `A mensagem que será enviada no canal.`,
             required: true
         },
+       {
+            name: `embed`,
+            description: `Mensagem com ou sem embed?`,
+            type: 5,
+            required: true
+       },
     ],
 
 
@@ -30,17 +36,26 @@ module.exports = {
 
 
     run: async (client, interaction, args) => {
-        // if (!interaction.member.permissions.has(Permissions.FLAGS.MANAGE_MESSAGES)) return interaction.reply({ content: 'Você não manda em mim. 😡', ephemeral: true })
 
-        // if (!interaction.guild.me.permissions.has(Permissions.FLAGS.SEND_MESSAGES)) return interaction.reply({ content: '🛑 Eu não tenho permissao para enviar mensagens.', ephemeral: true })
+        const canal = interaction.options.getChannel(`canal`);
+     
+        if (![0, 5].includes(canal.type)) return interaction.reply({ content: `Não consegui falar nada. vc informou um canal de texto válido? \n  Lembrando que só posso falar em canais de texto comum e em canais de anúncio. 📢`, ephemeral: true });
 
-        const canal = interaction.options.getChannel(`canal`)
-        console.log(canal.guild)
-        if (![`GUILD_TEXT`, `GUILD_ANNOUCEMENTS`].includes(canal.type)) return interaction.reply({ content: `Não consegui falar nada. vc informou um canal de texto válido?`, ephemeral: true })
+        const texto = interaction.options.getString(`mensagem`);
 
-        const texto = interaction.options.getString(`mensagem`)
-        canal.send({ content: texto })
+        const boolean = interaction.options.getBoolean(`embed`);
+
+        if (boolean === true){
+            const embed = new EmbedBuilder()
+            .setTitle(texto)
+            .setColor("#3086c9")
+            canal.send({embeds: [embed]})
+            .then(() => interaction.reply({ content: `Mensagem com embed enviada com sucesso no canal \`${canal.name}\`.`, ephemeral: true }))
+            .catch(() => interaction.reply({ content: `Deu erro aqui! eu não consegui enviar a mensagem.😖`, ephemeral: true }))
+        } else {
+            canal.send({ content: texto })
             .then(() => interaction.reply({ content: `Mensagem enviada com sucesso no canal \`${canal.name}\`.`, ephemeral: true }))
             .catch(() => interaction.reply({ content: `Deu erro aqui! eu não consegui enviar a mensagem.😖`, ephemeral: true }))
+        }
     },
 };

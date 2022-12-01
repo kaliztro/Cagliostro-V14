@@ -4,7 +4,9 @@ module.exports = {
     name: "apagar",
     description: "Apaga as mensagens de um canal.",
     type: ApplicationCommandType.ChatInput,
-    default_member_permissions: 'ManageMessages',
+    // default_member_permissions: 'ManageMessages',     pelo que testei nao funciona 
+    userPerms: ['Administrator'], // esse funciona 
+	botPerms: ['Administrator'],
     options: [
         {
             name: 'quantas',

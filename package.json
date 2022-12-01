@@ -24,12 +24,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kaliztro/Cagliostro-bot.git"
+    "url": "git+https://github.com/kaliztro/Cagliostro-V14.git.git"
+    
   },
   "author": "Kaliztro#4988",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/kaliztro/Cagliostro-bot/issues"
+    "url": "https://github.com/kaliztro/Cagliostro-V14.git/issues"
   },
-  "homepage": "https://github.com/kaliztro/Cagliostro-bot#readme"
+  "homepage": "https://github.com/kaliztro/Cagliostro-V14.git#readme"
 }

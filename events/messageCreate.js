@@ -2,6 +2,7 @@ const { EmbedBuilder, Collection, PermissionsBitField } = require('discord.js')
 const ms = require('ms');
 const client = require('..');
 const config = require('../config/config.json');
+const id = require(`../config/usuarios.json`);
 
 const prefix = client.prefix;
 const cooldown = new Collection();
@@ -58,5 +59,28 @@ client.on('messageCreate', async message => {
 			command.run(client, message, args)
 		}
 	}
-	
+});
+
+
+
+client.on("messageCreate", async (message) => {
+	// menção
+    if (!message.guild) return;
+
+    const emoj = client.guilds.cache.get("545386837846523905");
+    const emoji = emoj?.emojis.cache.find(emoji => emoji.name === "cagliostro") || `👌`;
+
+    let user = message.author.username
+    let frases = [`olá ${user}`,`iai ${user}`, `coé ${user}`, `bah`, `Ué, quem é tu?`, `coé ${user}, pinga eu não!`];
+
+    let rand = frases[Math.floor(Math.random()* frases.length)];
+
+    const menção = message.mentions.users.first()
+    if (menção) {
+        if (menção.id === `${client.user.id}` && message.author.bot) { return message.channel.send(`Pinga eu não bot 🤬`) };
+        if (menção.id === `${client.user.id}` && message.author.id === id.otelo) { return message.channel.send(`Pinga eu não nóia`)};
+
+        if (menção.id === `${client.user.id}`) { return message.channel.send(`${emoji}  ${rand}! Meu prefixo neste servidor é: **/**, Para mais informações utilize:  **/ajuda**`)}
+    };
+
 });
