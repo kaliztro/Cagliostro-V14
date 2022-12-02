@@ -2,7 +2,7 @@ const { Client, CommandInteraction, EmbedBuilder } = require("discord.js");
 const Schema = require('../../models/Guilds');
 
 module.exports = {
-    type: 'SUB_COMMAND',
+    type: 1,
     name: 'config',
     description: 'erro 404 Descrição não encontrada.',
     options: [

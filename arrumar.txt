@@ -6,8 +6,6 @@ verificar as permições para o bot e user de todos os comandos
 
 userinfo atividade da erro quando verifica um bot (retorna ua array vazia)  
 
-dar uma olhada no comando config
-
 adicionar a opcao de remover todos os cargos do comando rcargo
 
 comando lock colocar opcoes para trancar e destrancar em um unico comando 
@@ -15,6 +13,8 @@ comando lock colocar opcoes para trancar e destrancar em um unico comando
 criar uma tela inicial de configuração de cargos, msg de boas vindas etc... tipo o bot d ejogos gratis
 
 corrigir o botao jogos gratis
+
+comandos do dono nao estao funcionando
 
 
 depois de pronto:
