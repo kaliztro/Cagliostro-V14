@@ -26,7 +26,7 @@ client.on("ready", () => {
 
     let canal = server?.channels.cache.get('847321925189238796');
 
-    // canal?.send({ content: `estou On e o meu Ping é: **${Math.round(client.ws.ping)}ms** ` });
+    canal?.send({ content: `estou On e o meu Ping é: **${Math.round(client.ws.ping)}ms** ` });
 
 });
 

@@ -14,6 +14,8 @@ comando lock colocar opcoes para trancar e destrancar em um unico comando
 
 criar uma tela inicial de configuração de cargos, msg de boas vindas etc... tipo o bot d ejogos gratis
 
+corrigir o botao jogos gratis
+
 
 depois de pronto:
 
@@ -28,8 +30,6 @@ verificar os comandos de mod quando o user ou o bot nao tiverem permissao
 comando ban e kick e verificar se ambos estao mantendo no historico o motivo
 
 ativar a autenticacao de dois faotores e verificar no serverinfo se esta correto 
-
-testar o botao jogos gratis
 
 comandos funcionando:
 

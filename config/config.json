@@ -1,5 +1,5 @@
 {
-    "token": "NzUxMTYzMzI5NjQwMzk4ODg5.GOGsab.6J9kC2PQX-waCODf3g1Lf3nbc5-lC7YNeKaqGA",
+    "token": "ODgyNzE1NjYwMTM0Nzk3MzQy.GicPFu.qJT-Y_DTccxufIykKgwqxYE79ZpdD8wY-kWNEQ",
     "mongooseConnectionString": "mongodb+srv://cleber:cleber@cagliostro-cluster.2ipal.mongodb.net/teste_do_bot?retryWrites=true&w=majority",
 
     "PREFIX": "!",
