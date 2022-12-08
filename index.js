@@ -4,17 +4,19 @@ const mongoose = require("mongoose");
 const config = require("./config/config.json");
 const chalk = require('chalk');
 
-const client = new Client({
-  intents: [
-    GatewayIntentBits.Guilds,
-    GatewayIntentBits.GuildMessages,
-    GatewayIntentBits.GuildPresences,
-    GatewayIntentBits.GuildMessageReactions,
-    GatewayIntentBits.DirectMessages,
-    GatewayIntentBits.MessageContent
-  ],
-  partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.Reaction]
-});
+// const client = new Client({
+//   intents: [
+//     GatewayIntentBits.Guilds,
+//     GatewayIntentBits.GuildMessages,
+//     GatewayIntentBits.GuildPresences,
+//     GatewayIntentBits.GuildMessageReactions,
+//     GatewayIntentBits.DirectMessages,
+//     GatewayIntentBits.MessageContent
+//   ],
+//   partials: [Partials.Channel, Partials.Message, Partials.User, Partials.GuildMember, Partials.Reaction]
+// });
+
+const client = new Client({ intents: 32767 });
 
 module.exports = client;
 

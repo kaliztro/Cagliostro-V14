@@ -13,13 +13,16 @@ client.on("guildMemberAdd", async (member) => {
         if (!member.user.bot) {
 
             let embed = new EmbedBuilder()
-                .setColor(client.config.cor)
-                .setAuthor(member.user.tag, member.user.displayAvatarURL())
+                .setColor(`#3086c9`)
+                .setAuthor({
+                    name: member.user.tag,
+                    iconURL: member.user.displayAvatarURL()
+                })
                 .setTitle(`Boas-vindas`)
                 .setImage("https://i.imgur.com/QzfNwIE.gif")
                 .setDescription(`**${member.user}**, bem-vindo(a) aos** ${member.guild.name} **! :heart: \n Qualquer duvida sobre os comandos é so digitar **/ajuda**`)
                 .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
-                .setFooter(' ID do usuario: ' + member.user.id)
+                .setFooter({ text:` ID do usuario: ${member.user.id}`})
                 .setTimestamp();
 
             welcomeChannel?.send({ embeds: [embed] })
@@ -28,8 +31,11 @@ client.on("guildMemberAdd", async (member) => {
 
         if (member.user.bot) {
             let botembed = new EmbedBuilder()
-                .setColor(client.config.cor)
-                .setAuthor(member.user.tag, member.user.displayAvatarURL())
+                .setColor(`#3086c9`)
+                .setAuthor({
+                    name: member.user.tag,
+                    iconURL: member.user.displayAvatarURL()
+                })
                 .setTitle("ah não, um Bot acabou de entrar. 🤬")
                 .setImage("")
                 .setDescription(`${member.user} o que vc está fazendo aqui??`)

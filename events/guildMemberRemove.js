@@ -13,13 +13,15 @@ client.on("guildMemberRemove", async (member) => {
         if (!member.user.bot) {
 
             let embed = new EmbedBuilder()
-                .setColor(client.config.cor)
-                .setAuthor(member.user.tag, member.user.displayAvatarURL())
+                .setColor(`#3086c9`)
+                     .setAuthor({
+                    name: member.user.tag,
+                    iconURL: member.user.displayAvatarURL()
+                })
                 .setTitle(member.user.username + ' caiu fora')
-                .setImage("")
                 .setDescription(`**${member.user.username}**, saiu do servidor! :broken_heart:`)
                 .setThumbnail(member.user.displayAvatarURL({ dynamic: true, format: "png", size: 1024 }))
-                .setFooter('ID do usuario: ' + member.user.id)
+                .setFooter({ text:` ID do usuario: ${member.user.id}`})
                 .setTimestamp();
 
             welcomeChannel?.send({ embeds: [embed] })
@@ -31,7 +33,10 @@ client.on("guildMemberRemove", async (member) => {
 
             let botembed = new EmbedBuilder()
                 .setColor(client.config.cor)
-                .setAuthor(member.user.tag, member.user.displayAvatarURL())
+                     .setAuthor({
+                    name: member.user.tag,
+                    iconURL: member.user.displayAvatarURL()
+                })
                 .setTitle(`${nelson} HA HA`)
                 .setImage("")
                 .setDescription(`O Bot ${member.user.username} foi expulso 🤣🤣🤣`)
