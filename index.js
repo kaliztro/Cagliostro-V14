@@ -48,12 +48,7 @@ client.on("messageCreate", async (message) => {
   // console.log(message)
 
   const config = require("./config/config.json");
-  const PREFIX = config.PREFIX
-
-  const Schema = require("./models/Guilds")
-
-  const guildConfig = await Schema.findOne({ _id: message.guild.id });
-  const prefix = guildConfig?.Prefix.prefix ?? PREFIX
+  const prefix = config.PREFIX
 
   if (
       message.author.bot ||
