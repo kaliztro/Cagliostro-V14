@@ -4,12 +4,16 @@
   "description": "Bot Cagliostro para gerenciar o servidor no discord",
   "main": "index.js",
   "dependencies": {
+    "@discordjs/opus": "^0.8.0",
     "@discordjs/rest": "^1.0.1",
+    "@discordjs/voice": "^0.14.0",
     "ascii-table": "^0.0.9",
     "axios": "^0.27.2",
     "chalk": "^2.4.1",
     "discord-api-types": "^0.37.2",
+    "discord-player": "^5.3.2",
     "discord.js": "^14.2.0",
+    "ffmpeg-static": "^5.1.0",
     "glob": "^8.0.3",
     "moment": "^2.29.4",
     "mongoose": "^6.5.2",
@@ -25,7 +29,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kaliztro/Cagliostro-V14.git.git"
-    
   },
   "author": "Kaliztro#4988",
   "license": "ISC",

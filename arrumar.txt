@@ -31,6 +31,8 @@ comando ban e kick e verificar se ambos estao mantendo no historico o motivo
 
 ativar a autenticacao de dois faotores e verificar no serverinfo se esta correto 
 
+comando limpar crachou o bot
+
 comandos funcionando:
 
 lock
