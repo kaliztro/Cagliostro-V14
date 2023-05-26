@@ -1,6 +1,6 @@
 {
-    "token": "ODgyNzE1NjYwMTM0Nzk3MzQy.GicPFu.qJT-Y_DTccxufIykKgwqxYE79ZpdD8wY-kWNEQ",
-    "mongooseConnectionString": "mongodb+srv://cleber:cleber@cagliostro-cluster.2ipal.mongodb.net/teste_do_bot?retryWrites=true&w=majority",
+    "token": "",
+    "mongooseConnectionString": "",
 
     "PREFIX": "!",
 
@@ -8,10 +8,8 @@
 
     "donoID": "701901561915506717",
     
-    "CLIENT_ID": "882715660134797342",
-    "GUILD_ID": "545386837846523905",
-
-    "senha_database_Supabase": "vDrgYOFPfUCrCWuy",
+    "CLIENT_ID": "",
+    "GUILD_ID": "",
 
     "messages": {
 		"COOLDOWN_MESSAGE": "You are on `<duration>` cooldown!"
